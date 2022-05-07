@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="es" xmlns="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Punto 2-6</title>
+</head>
+<body>
+    <h1>Punto 2.6: Convertir String a LocalDate</h1>
+    <p>Cree un objeto de la clase Scanner y solicite al usuario que ingrese por consola los siguientes valores:
+        en una variable de tipo String, la cadena de texto con el siguiente formato: dd/MM/yyyy.
+        Convierta esa cadena de texto en un objeto de la clase LocalDate.
+        Cree un objeto pf5 de la clase Punto2, utilice el método setFecha1(LocalDate fecha1) para asignar el valor al atributo fecha1. Luego cree una nueva variable de tipo LocalDate para guardar el incremento de 365 días a fecha1 Muestre por consola la nueva fecha.
+        En otra variable de tipo String ingrese otra fecha con el siguiente formato: dd/MM/yyyy.
+        Utilice el método setFecha2(LocalDate fecha2) para asignar el valor al atributo fecha2. Luego cree una nueva variable de tipo LocalDate para guardar el decremento de 6 meses a fecha2 Muestre por consola la nueva fecha.</p>
+
+    <h4>Fecha 1: <span th:text="${fecha1}"></span></h4>
+    <h4>Fecha 2: <span th:text="${fecha2}"></span></h4>
+
+    <h2>Resultado</h2>
+
+    <h4>Fecha 1 menos 365 dias: <span th:text="${resultadoF1}"></span></h4>
+    <h4>Fecha 2 menos 6 meses: <span th:text="${resultadoF2}"></span></h4>
+
+    <a href="/menuPunto02">Menu punto 02</a>
+
+</body>
+</html>
