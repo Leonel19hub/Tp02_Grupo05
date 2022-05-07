@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="es" xmlns="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Punto 2-2</title>
+</head>
+<body>
+    <h1>Punto 2-2: Manejo de LocalTime</h1>
+
+    <p>Utilizando el constructor sobrecargado con los parámetros para las variables de tipo LocalTime. Sin utilizar ningún objeto scanner envíe valores para los atributos time1 y time2. Incremente time1 en 5 horas y decremente time2 en 20 minutos. Luego muestre por consola el valor de cada atributo.</p>
+
+    <h4>Time 1: <span th:text="${time1}"></span></h4>
+    <h4>Time 2: <span th:text="${time2}"></span></h4>
+
+    <h2>LocalTime Modificados</h2>
+
+    <h4>Time 1 mas 5 Horas: <span th:text="${time1Plus}"></span></h4>
+    <h4>Time 2 menos 20 minutos: <span th:text="${time2Less}"></span></h4>
+
+    <a href="/menuPunto02">Menu punto 02</a>
+
+</body>
+</html>
