@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="es" xmlns="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Punto 4</title>
+</head>
+<body>
+    <h1>Punto 04: Numeros pares</h1>
+
+    <p>Solicite al usuario que ingrese 8 números enteros que serán guardados en un arreglo de tipo entero. Luego muestre cada elemento del arreglo acompañado con la palabra “par” o “impar” según corresponda.</p>
+
+    <h3>Listado de Numeros</h3>
+
+    <table>
+        <tr>
+            <th>Numeros par / impar</th>
+        </tr>
+        <tr th:each="num:${arregloF}">
+            <th th:text="${num}"></th>
+        </tr>
+    </table>
+
+    <br>
+    <a href="/menu">Volver al menu</a>
+
+</body>
+</html>
