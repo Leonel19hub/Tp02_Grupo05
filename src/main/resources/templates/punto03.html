@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="es" xmlns="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Punto 3</title>
+</head>
+<body>
+    <h1>Punto 3: Notas del alumno</h1>
+
+    <p>Crear una clase denominada Punto3 con los siguientes atributos: Nombre, apellido, Libreta Universitaria, notas (arreglo que almacena 5 notas de tipo double). Construir dentro de la clase Alumno los siguientes métodos:
+        calcularPromedio() retorna el promedio de las notas del alumno.
+        obtenerNotaMaxima() que retorna la nota máxima.
+        Desde la clase principal solicitar al usuario que ingrese por consola los datos de un alumno y por último muestre el resultado de cada método.</p>
+
+    <h4>Notas: <span th:text="${nota1}"></span> - <span th:text="${nota2}"></span> - <span th:text="${nota3}"></span> - <span th:text="${nota4}"></span> - <span th:text="${nota5}"></span></h4>
+
+    <h4>Nombre: <span th:text="${nombre}"></span></h4>
+    <h4>Apellido: <span th:text="${apellido}"></span></h4>
+    <h4><span th:text="${notaA}"></span></h4>
+    <h4><span th:text="${promedioF}"></span></h4>
+
+    <a href="/menu">Volver al menu</a>
+
+</body>
+</html>
