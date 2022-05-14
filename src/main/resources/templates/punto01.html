@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="es" xmlns="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Punto 01</title>
+</head>
+<body>
+    <h1>Punto 01: Datos de la persona</h1>
+
+    <p>
+        Cree los métodos necesarios para determinar:
+        <br> - Cuantos años tiene la persona.
+        <br> - El signo del zodiaco de la persona según la fecha de nacimiento.
+        <br> - Estación del año que corresponde según la fecha de nacimiento.
+    </p>
+
+    <h4>Nombre: <span th:text="${nombre}"></span></h4>
+    <h4>Fecha de Nacimiento: <span th:text="${dateBirthday}"></span></h4>
+    <h4>Edad: <span th:text="${edad}"></span></h4>
+    <h4>Signo del Zodiago: <span th:text="${zodiaco}"></span></h4>
+    <h4>Estacion del año: <span th:text="${estacionAnio}"></span></h4>
+
+    <a href="/menu">Volver al menu</a>
+
+</body>
+</html>
