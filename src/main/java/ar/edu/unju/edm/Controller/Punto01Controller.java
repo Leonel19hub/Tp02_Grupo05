@@ -12,10 +12,6 @@ import java.time.LocalDate;
 
 @Controller
 public class Punto01Controller {
-	 @GetMapping({"/menu", "/principal", "/grupo5", "/home"})
-	    public String getMenu(){
-	        return "menuTp02";
-	    }
 
 	    @Autowired
 	    Punto01 punto01;
