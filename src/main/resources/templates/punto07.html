@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es" xmlns="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Punto 7</title>
+</head>
+<body>
+    <h1>Punto 07: Mostrar datos en tabla</h1>
+
+    <style>
+        /* table{
+            border: 1px solid #000;
+            padding: 5px;
+        } */
+
+        th{
+            padding: 5px;
+            border: 1px solid #000;
+        }
+    </style>
+
+    <h3>Listado Alumno</h3>
+
+    <table>
+		<tr>
+			<th>Nombre</th>
+			<th>Apellido</th>
+			<th>Fecha de Nacimiento</th>
+			<th>Telefono</th>
+			<th>Dni</th>
+			<th>Edad</th>
+		</tr>
+		<tr th:each = "alu:${listadoAlumno}">
+			<th th:text = "${alu.nombre}"></th>
+			<th th:text = "${alu.apellido}"></th>
+			<th th:text = "${alu.fechaNacimiento}"></th>
+			<th th:text = "${alu.telefono}"></th>
+			<th th:text = "${alu.dni}"></th>
+			<th th:text = "${alu.edad}"></th>
+		</tr>
+	</table>
+   
+    <br>
+    <a href="/menu">Volver al menu</a>
+
+</body>
+</html>
