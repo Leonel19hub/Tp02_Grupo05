@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es" xmlns="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Punto 6</title>
+</head>
+<body>
+    <h1>Punto 06: Arreglo de numeros inverso</h1>
+
+    <p>Solicite al usuario que ingrese 10 números enteros por consola y guardarlos en un arreglo de tipo entero. Luego muestre los números en orden inverso, es decir, el primero que se introduce es el último en
+        mostrarse y viceversa.</p>
+
+    <h3>Arreglo Original</h3>
+
+    <table>
+        <tr>
+            <th>Numeros del Arreglo</th>
+        </tr>
+        <tr th:each="num:${arreglo}">
+            <th th:text="${num}"></th>
+        </tr>
+    </table>
+    <br>
+    <h3>Arreglo Invertido</h3>
+
+    <table>
+        <tr>
+            <th>Numeros del Arreglo</th>
+        </tr>
+        <tr th:each="numInv:${numInverso}">
+            <th th:text="${numInv}"></th>
+        </tr>
+    </table>
+
+    <br>
+    <a href="/menu">Volver al menu</a>
+
+</body>
+</html>
