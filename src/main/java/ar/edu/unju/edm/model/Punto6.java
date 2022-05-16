@@ -1,48 +1,50 @@
 package ar.edu.unju.edm.model;
 
-import java.util.Scanner;
-
 import org.springframework.stereotype.Component;
 
 @Component
 public class Punto6 {
-	private int num;
-	
-	public Punto6() {
-	// TODO Auto-generated constructor stub
-	}
 
-	public Punto6(int num) {
-		super();
-		this.num = num;
-	}
+    private int [] numeros = new int [10];
 
-	public int getNum1() {
-		return num;
-	}
+    public Punto6() {
+    }
 
-	public void setNum1(int num) {
-		this.num = num;
-	}	
-	
-	/*public static void main (int []args) {
-		int arr []= new int [10];
-		Scanner sc = new Scanner(System.in);
-		int n,aux,a;
-		for (n=0,n<arr,n++){
-			System.out.print ("introduzca los numeros: ");
-			arr [n]=sc.arr.nextN();
-		}
-		System.out.print("Los numeros en orden inverson son: ");
-		int j=9;
-		while (j>=0) {
-			System.out.print("|"+arr[j]+"|");
-			j--; //j-;
-		}
-	*/
-	}
+    public Punto6(int[] numeros) {
+        this.numeros = numeros;
+    }
 
+    public int[] getNumeros() {
+        return numeros;
+    }
 
-	
+    public void setNumeros(int[] numeros) {
+        this.numeros = numeros;
+    }
 
+    public String[] arregloInvertido(){
 
+        // int aux;
+
+        // for(int i=0;i<numeros.length/2;i++){
+        //     aux = numeros[i];
+        //     numeros[i] = numeros[numeros.length-1-i];
+        //     numeros[numeros.length-1-i] = aux;
+        // }        
+
+        String [] arrayInvert = new String [10];
+
+        for(int i=0;i<numeros.length;i++){
+            arrayInvert[i] = numeros[numeros.length-1-i]+""; 
+        }
+
+        // for(int i=numeros.length-1;i>=0;i--){
+        //     for(int j = 0; j<=9;j++){
+        //         arrayInvert[j] ="Posiscion "+j+" - valor:"+numeros[i];
+        //     }
+        // }
+
+        return arrayInvert;
+    }
+    
+}

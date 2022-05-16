@@ -1,46 +1,45 @@
 package ar.edu.unju.edm.Controller;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
-import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.servlet.ModelAndView;
 
 import ar.edu.unju.edm.model.Punto6;
-import ar.edu.unju.edm.until.NumeroEnteros;
 
 @Controller
 public class Punto6Controller {
-	
-	@GetMapping ("/punto6")
-	public String GetListado(Model model) {
-		
-		Punto6 n1 = new Punto6(1);
-		Punto6 n2 = new Punto6(2);
-		Punto6 n3 = new Punto6(3);
-		Punto6 n4 = new Punto6(4);
-		Punto6 n5 = new Punto6(5);
-		Punto6 n6 = new Punto6(6);
-		Punto6 n7 = new Punto6(7);
-		Punto6 n8 = new Punto6(8);
-		Punto6 n9 = new Punto6(9);
-		Punto6 n10 = new Punto6(10);
-		
 
-		NumeroEnteros num = new NumeroEnteros(); 
-		num.getNum().add(n10);
-		num.getNum().add(n9);
-		num.getNum().add(n8);
-		num.getNum().add(n7);
-		num.getNum().add(n6);
-		num.getNum().add(n5);
-		num.getNum().add(n4);
-		num.getNum().add(n3);
-		num.getNum().add(n2);
-		num.getNum().add(n1);
+    @Autowired
+    Punto6 punto6;
 
-		
-		
-		model.addAttribute("NumeroEnteros", num.getNum());
-		return "Punto6";
+    @GetMapping("/punto06")
+    public ModelAndView punto_06(@RequestParam(name = "n1") int n1, @RequestParam(name = "n2") int n2, @RequestParam(name = "n3") int n3, @RequestParam(name = "n4") int n4, @RequestParam(name = "n5") int n5, @RequestParam(name = "n6") int n6, @RequestParam(name = "n7") int n7, @RequestParam(name = "n8") int n8, @RequestParam(name = "n9") int n9, @RequestParam(name = "n10") int n10){
 
-}
+        int [] numAux = new int [10];
+        numAux[0] = n1;
+        numAux[1] = n2;
+        numAux[2] = n3;
+        numAux[3] = n4;
+        numAux[4] = n5;
+        numAux[5] = n6;
+        numAux[6] = n7;
+        numAux[7] = n8;
+        numAux[8] = n9;
+        numAux[9] = n10;
+
+        punto6.setNumeros(numAux);
+
+        String [] numInverso = new String[10];
+        numInverso = punto6.arregloInvertido();
+
+        ModelAndView modelView = new ModelAndView("punto06");
+
+        modelView.addObject("arreglo", punto6.getNumeros());
+        modelView.addObject("numInverso", numInverso);
+        
+        return modelView;
+    }
+    
 }
